@@ -4,7 +4,7 @@ services:
       dockerfile: ./docker/docker-rocm/Dockerfile
       context: ../..
       args:
-        PIP_INDEX: https://pypi.org/simple
+        PIP_INDEX: https://pypi.tuna.tsinghua.edu.cn/simple
         EXTRAS: metrics
     container_name: llamafactory
     ports:
@@ -19,3 +19,4 @@ services:
       - /dev/kfd:/dev/kfd
       - /dev/dri:/dev/dri
     restart: unless-stopped
+    privileged: true
