@@ -3,7 +3,7 @@ ARG BASE_IMAGE=rocm/pytorch:rocm6.4.1_ubuntu22.04_py3.10_pytorch_release_2.6.0
 FROM ${BASE_IMAGE}
 
 # Installation arguments
-ARG PIP_INDEX=https://pypi.org/simple
+ARG PIP_INDEX=https://pypi.tuna.tsinghua.edu.cn/simple
 ARG EXTRAS=metrics
 ARG INSTALL_FLASHATTN=false
 ARG HTTP_PROXY=""
