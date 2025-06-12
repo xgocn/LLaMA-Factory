@@ -668,9 +668,12 @@ docker compose exec llamafactory bash
 AMD ROCm 用户：
 
 ```bash
+mkdir -p hf_cache shared_data output
 cd docker/docker-rocm/
 docker compose up -d
 docker compose exec llamafactory bash
+export HF_ENDPOINT=https://hf-mirror.com
+llamafactory-cli webui
 ```
 
 <details><summary>不使用 Docker Compose 构建</summary>
