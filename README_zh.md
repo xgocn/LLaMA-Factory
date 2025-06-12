@@ -638,6 +638,7 @@ cd docker/docker-rocm/
 docker compose up -d
 docker compose exec llamafactory bash
 export HF_ENDPOINT=https://hf-mirror.com
+export HIP_VISIBLE_DEVICES=0,1
 llamafactory-cli webui
 ```
 
